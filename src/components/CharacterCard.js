@@ -1,20 +1,30 @@
 import React from "react";
 
 function CharacterCard({
-  id, name, status, species, type, gender, origin, name, url, location, image, episode, created }
-}
- {
-  console.log("props", props);
-  console.log("character card name props", props.data.results);
-
+  // passing props of what is being returned from api data
+  id,
+  name,
+  status,
+  species,
+  type,
+  gender,
+  origin,
+  name,
+  url,
+  location,
+  image,
+  episode,
+  created
+}) {
+  // character card order (from mvp preview) - image, name, species, status, location, origin
   return (
-    <div className="CharacterCard">
-      <h3 className="name">Name: {props.results.name}</h3>
-      <h3 className="status">Status: {props.results.status}</h3>
-      <h3 className="species">Species: {props.results.species}</h3>
-      <h3 className="type">Type: {props.results.type}</h3>
-      <h3 className="gender">Gender: {props.results.gender}</h3>
-      <h3 className="origin">Origin: {props.results.origin}</h3>
+    <div>
+      <img src={image} alt="image" />
+      <h3 className="Name">Name: {name}</h3>
+      <h3 className="species">Species: {species}</h3>
+      <h3 className="status">Status: {status}</h3>
+      <h3 className="location">Location: {location.name}</h3>
+      <h3 className="origin">Origin: {origin.name}</h3>
     </div>
   );
 }
