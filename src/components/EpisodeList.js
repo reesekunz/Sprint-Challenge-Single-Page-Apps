@@ -18,7 +18,7 @@ function EpisodeList(props) {
         // Console log handles success to  make sure component mounted
 
         console.log("Component mounted, data = ", response.data.results);
-        setEpisodes(response.data.results);
+        setCharacters(response.data.results);
       })
       // Handles failure
 
@@ -29,7 +29,7 @@ function EpisodeList(props) {
   }, []);
   return (
     <section className="character-list grid-view">
-      {episodes.map(episodes => {
+      {episdoes.map(episdoe => {
         return <EpisodeCard key={episode.id} {...episode} />;
       })}
     </section>
