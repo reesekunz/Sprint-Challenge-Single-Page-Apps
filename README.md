@@ -20,7 +20,7 @@ In case you ever need to return to old code. Remember your **ABC: Always Be Comm
 
 In this challenge, you will create a Single Page Application complete with Client-Side Routing. It must consume a 3rd party API service (based on the TV show [Rick and Morty](https://rickandmortyapi.com/documentation).)
 
-## Self-Study/Essay Questions
+## Self-Study/Essay Questions ✅.
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
@@ -34,7 +34,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 > Answer:
 
 
-## Project Set Up
+## Project Set Up ✅.
 
 Follow these steps to set up and work on your project:
 
@@ -67,7 +67,7 @@ Construct a Single Page Application with React incorporating multiple components
 Keep your components separate and design them before adding in your Router.
 You can test them individually before adding in the Router (Part 2).
 
-Create 3 page components to display data from 3 API endpoints:
+Create 3 page components to display data from 3 API endpoints: ✅.
 
 - `https://rickandmortyapi.com/api/character/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-characters)
 - `https://rickandmortyapi.com/api/locations/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-locations)

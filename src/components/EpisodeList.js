@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-function CharacterList() {
+function EpisodeList() {
   // TODO: Add useState to track data from useEffect
 
   useEffect(() => {
@@ -15,5 +15,4 @@ function CharacterList() {
 
 }
 
-
-export default CharacterList;
+export default EpisodeList;
