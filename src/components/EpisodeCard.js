@@ -8,7 +8,7 @@ const StyledCards = styled.div`
   justify-content: center;
   align-items: center;
   border: 1px solid black;
-  background-color: lightblue;
+  background-color: peachpuff;
   width: 40%;
   padding: 2%;
   margin: 3%;

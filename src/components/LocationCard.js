@@ -8,7 +8,7 @@ const StyledCards = styled.div`
   justify-content: center;
   align-items: center;
   border: 1px solid black;
-  background-color: lightblue;
+  background-color: lavender;
   width: 40%;
   padding: 2%;
   margin: 3%;
@@ -21,6 +21,8 @@ function LocationCard({ name, type, dimension, residents }) {
         <h3 className="Name">Location: {name}</h3>
         <h3 className="Type">Type: {type}</h3>
         <h3 className="Dimension">Dimension: {dimension}</h3>
+        <h3 className="Residents">Residents: {residents.length}</h3>
+
       </div>
     </StyledCards>
   );
