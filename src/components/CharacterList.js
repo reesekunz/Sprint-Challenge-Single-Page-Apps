@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-
-function CharacterList(props) {
+function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [characters, setCharacters] = useState({});
 
@@ -10,33 +9,23 @@ function CharacterList(props) {
     // TODO: Add AJAX/API Request here - must run in `useEffect`
     axios
       .get(`https://rickandmortyapi.com/api/character/`)
-      // handles success 
+      // handles success
       .then(response => {
-        setCharacters(response.results);
+        setCharacters(response.characters);
       })
-      // handles failure 
+      // handles failure
       .catch(error => {
-        console.log('no bueno', error);
+        console.log("no bueno", error);
       });
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-  }, [setCharacters])
+  }, []);
 
-
-console.log(response.results)
+  console.log("component mounted, data = ", characters);
   return (
-  <section className='character-list grid-view'>
-{/* TODO: `array.map()` over your state here! */}
-     {/* characters.map(character => {
-
-
-
-     } */}
-     
-     
-     
+    <section className="character-list grid-view">
+      {/* TODO: `array.map()` over your state here! */}
     </section>
-  )
-
-    }
+  );
+}
 
 export default CharacterList;
