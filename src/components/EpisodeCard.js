@@ -14,16 +14,16 @@ const StyledCards = styled.div`
   margin: 3%;
 `;
 
-function LocationCard({ name, type, dimension, residents }) {
+function EpisodeCard({ name, air_date, episode }) {
   return (
     <StyledCards>
       <div className="character-card">
-        <h3 className="Name">Location: {name}</h3>
-        <h3 className="Type">Type: {type}</h3>
-        <h3 className="Dimension">Dimension: {dimension}</h3>
+        <h3 className="Name">Episode: {name}</h3>
+        <h3 className="Type">Air-Date: {air_date}</h3>
+        <h3 className="Dimension">Dimension: {episode}</h3>
       </div>
     </StyledCards>
   );
 }
 
-export default LocationCard;
+export default EpisodeCard;

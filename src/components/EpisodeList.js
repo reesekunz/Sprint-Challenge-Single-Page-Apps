@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import LocationCard from "./LocationCard";
+import EpisodeCard from "./EpisodeCard";
 
-function LocationsList(props) {
+function EpisodesList(props) {
   // TODO: Add useState to track data from useEffect
-  const [locations, setLocations] = useState([]);
+  const [episodes, setEpisodes] = useState([]);
 
   useEffect(() => {
     // TODO: Add AJAX/API Request here - must run in `useEffect`
@@ -13,12 +13,12 @@ function LocationsList(props) {
     axios
       // handles success
     // be sure to change api url to get data for location 
-      .get("https://rickandmortyapi.com/api/location/")
+      .get("https://rickandmortyapi.com/api/episode/")
       .then(response => {
         // Console log handles success to  make sure component mounted
 
         console.log("Component mounted, data = ", response.data.results);
-        setLocations(response.data.results);
+        setEpisodes(response.data.results);
       })
       // Handles failure
 
@@ -29,10 +29,10 @@ function LocationsList(props) {
   }, []);
   return (
     <section className="character-list grid-view">
-      {locations.map(location => {
-        return <LocationCard key={location.id} {...location} />;
+      {episodes.map(episode => {
+        return <EpisodeCard key={episode.id} {...episode} />;
       })}
     </section>
   );
 }
-export default LocationsList;
+export default EpisodesList;
