@@ -1,15 +1,13 @@
 import React from "react";
   // passing props of what is being returned from api data that you want to show for location section
 
-function EpisodeCard ({ name, episode, characters, url }) {
+function EpisodeCard ({ name, air_date, episode }) {
 
   return (
-    <div className="episode-card">
+    <div className="character-card">
       <h3 className="Name">Name: {name}</h3>
-      <h3 className="Episode">Episode: {episode}</h3>
-      <h3 className="Characters">Characters: {characters}</h3>
-      <h3 className="URL">URL: {url}</h3>
-
+      <h3 className="Type">Type: {air_date}</h3>
+      <h3 className="Dimension">Dimension: {episode}</h3>
   </div> )
 }
 
