@@ -20,7 +20,7 @@ function EpisodeCard ({ name, air_date, episode }) {
   return (
     <StyledCards>
     <div className="character-card">
-      <h3 className="Name">{name}</h3>
+      <h3 className="Name">Episode: {name}</h3>
       <h3 className="Type">Air-Date: {air_date}</h3>
       <h3 className="Dimension">Dimension: {episode}</h3>
   </div>

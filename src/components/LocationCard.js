@@ -19,7 +19,7 @@ function LocationCard ({ name, type, dimension, residents }) {
   return (
     <StyledCards>
     <div className="character-card">
-      <h3 className="Name">Name: {name}</h3>
+      <h3 className="Name">Location: {name}</h3>
       <h3 className="Type">Type: {type}</h3>
       <h3 className="Dimension">Dimension: {dimension}</h3>
   </div>
