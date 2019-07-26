@@ -17,3 +17,4 @@ function CharacterCard ({ image, name, species, status, location, origin }) {
 }
 
 export default CharacterCard;
+

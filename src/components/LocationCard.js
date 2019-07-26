@@ -1,7 +1,15 @@
-import React from 'react'
+import React from "react";
+  // passing props of what is being returned from api data that you want to show for location section
 
-export default function LocationCard ({ name, type, dimension, residents }) {
-  // image={image}
-  return (<span>todo: location</span>
-  )
+function LocationCard ({ name, type, dimension, residents }) {
+
+  return (
+    <div className="location-card">
+      <h3 className="Name">Name: {name}</h3>
+      <h3 className="Type">Type: {type}</h3>
+      <h3 className="Dimension">Dimension: {dimension}</h3>
+      <h3 className="Residents">Residents: {residents}</h3>
+  </div> )
 }
+
+export default LocationCard;
