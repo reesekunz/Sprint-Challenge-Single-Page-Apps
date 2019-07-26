@@ -3,7 +3,6 @@ import axios from "axios";
 
 import CharacterCard from "./CharacterCard";
 
-
 function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [data, setData] = useState({});
@@ -13,27 +12,22 @@ function CharacterList() {
     axios
       .get(`https://rickandmortyapi.com/api/character/`)
       // handles success
-      .then(resolved => setData(resolved.data))
+      .then(response => setData(response.data.results))
 
       // Handles failure
-      .catch(error => console.log("uh oh", error));
+      .catch(error => console.log("no bueno", error));
     // Add empty dependency array to avoid infinite API requests
   }, []);
 
   // Console log handles success to  make sure component mounted
   console.log("component did mount, data = ", data);
+  //console.log(response.data);
 
-  if (data.results === undefined) {
-    return <div />;
-  } else {
-    return (
-      <div>
-        {data.results.map((item, index) => {
-          return <CharacterCard key={index} data={item} />;
-        })}
-      </div>
-    );
-  }
-}
+  return (
+
+    <div>hi</div>
+  )
+  
+
 
 export default CharacterList;

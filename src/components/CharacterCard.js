@@ -1,20 +1,13 @@
 import React from "react";
 
 function CharacterCard({
-  // passing props of what is being returned from api data
-  id,
-  name,
-  status,
-  species,
-  type,
-  gender,
-  origin,
-  name,
-  url,
-  location,
+  // passing props of what is being returned from api data that you want to show for character section
   image,
-  episode,
-  created
+  name,
+  species,
+  status,
+  location,
+  origin
 }) {
   // character card order (from mvp preview) - image, name, species, status, location, origin
   return (
