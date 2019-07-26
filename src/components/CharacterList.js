@@ -9,24 +9,30 @@ function CharacterList(props) {
 
   useEffect(() => {
     // TODO: Add AJAX/API Request here - must run in `useEffect`
+
     axios
-      .get(`https://rickandmortyapi.com/api/character/`)
       // handles success
+
+      .get(`https://rickandmortyapi.com/api/character/`)
       .then(response => {
+        // Console log handles success to  make sure component mounted
+
         console.log("Component mounted, data = ", response.data.results);
         setCharacters(response.data.results);
       })
-
       // Handles failure
-      .catch(error => console.log("no bueno", error));
+
+      .catch(error => {
+        console.error("no bueno", error);
+      });
     // Add empty dependency array to avoid infinite API requests
   }, []);
-
-  // Console log handles success to  make sure component mounted
-  console.log("component did mount, data = ", response.data.results);
-
-  // mapping over and returning each unique character
-  return <section className="character-list grid-view">hi</section>;
+  return (
+    <section className="character-list grid-view">
+      {characters.map(character => {
+        return <CharacterCard key={character.id} {...character} />;
+      })}
+    </section>
+  );
 }
-
 export default CharacterList;

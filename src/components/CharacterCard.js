@@ -1,17 +1,11 @@
 import React from "react";
-
-function CharacterCard({
   // passing props of what is being returned from api data that you want to show for character section
-  image,
-  name,
-  species,
-  status,
-  location,
-  origin
-}) {
+
+function CharacterCard ({ image, name, species, status, location, origin }) {
+
   // character card order (from mvp preview) - image, name, species, status, location, origin
   return (
-    <div>
+    <div className="character-card">
       <img src={image} alt="" />
       <h3 className="Name">Name: {name}</h3>
       <h3 className="species">Species: {species}</h3>
