@@ -12,7 +12,7 @@ function CharacterCard({
   // character card order (from mvp preview) - image, name, species, status, location, origin
   return (
     <div>
-      <img src={image} alt="image" />
+      <img src={image} alt="" />
       <h3 className="Name">Name: {name}</h3>
       <h3 className="species">Species: {species}</h3>
       <h3 className="status">Status: {status}</h3>
