@@ -3,7 +3,7 @@ import axios from "axios";
 
 import EpisodeCard from "./EpisodeCard";
 
-function EpisodeList(props) {
+function EpisodesList(props) {
   // TODO: Add useState to track data from useEffect
   const [episodes, setEpisodes] = useState([]);
 
@@ -12,13 +12,13 @@ function EpisodeList(props) {
 
     axios
       // handles success
-
-      .get(`https://rickandmortyapi.com/api/episode/`)
+    // be sure to change api url to get data for location 
+      .get("https://rickandmortyapi.com/api/episode/")
       .then(response => {
         // Console log handles success to  make sure component mounted
 
         console.log("Component mounted, data = ", response.data.results);
-        setCharacters(response.data.results);
+        setEpisodes(response.data.results);
       })
       // Handles failure
 
@@ -29,10 +29,10 @@ function EpisodeList(props) {
   }, []);
   return (
     <section className="character-list grid-view">
-      {episdoes.map(episdoe => {
+      {episodes.map(episode => {
         return <EpisodeCard key={episode.id} {...episode} />;
       })}
     </section>
   );
 }
-export default EpisodeList;
+export default EpisodesList;
